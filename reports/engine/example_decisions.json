@@ -1,0 +1,228 @@
+[
+  {
+    "action": "ship_as_is",
+    "address_review": {
+      "address_quality": "complete",
+      "cached": false,
+      "language": "English",
+      "missing_details": [],
+      "model": null,
+      "name_quality": "unremarkable",
+      "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+      "source": "offline_heuristic"
+    },
+    "disposition": "recommendation",
+    "expected_contribution_inr": {
+      "hold_cancel": "0.00",
+      "nudge_to_prepaid": "608.29",
+      "ship_after_confirmation": "582.68",
+      "ship_as_is": "627.98"
+    },
+    "order_id": "DEMO-TRUSTED",
+    "policy_schema_version": 1,
+    "prepaid_discount_inr": "0.00",
+    "reason": "Ship: the estimated contribution is highest among the actions allowed by the current risk thresholds.",
+    "required_before_shipping": [],
+    "risk_probability": 0.181992,
+    "risk_signals": [
+      {
+        "feature": "value_scaled",
+        "log_odds_contribution": 0.182765
+      }
+    ],
+    "scenario_assumptions": true,
+    "selected_expected_contribution_inr": "627.98"
+  },
+  {
+    "action": "ship_after_confirmation",
+    "address_review": {
+      "address_quality": "needs_clarification",
+      "cached": false,
+      "language": "Hinglish",
+      "missing_details": [
+        "house/building and street/locality details"
+      ],
+      "model": null,
+      "name_quality": "unremarkable",
+      "reason": "Offline heuristic: ask for specific delivery-location details.",
+      "source": "offline_heuristic"
+    },
+    "disposition": "recommendation",
+    "expected_contribution_inr": {
+      "hold_cancel": "0.00",
+      "nudge_to_prepaid": "225.13",
+      "ship_after_confirmation": "198.79",
+      "ship_as_is": "177.59"
+    },
+    "order_id": "DEMO-HINGLISH",
+    "policy_schema_version": 1,
+    "prepaid_discount_inr": "0.00",
+    "reason": "Ask the customer to confirm delivery details before shipping.",
+    "required_before_shipping": [
+      "customer confirms or corrects delivery-location details",
+      "explicit customer confirmation; no shipment before confirmation"
+    ],
+    "risk_probability": 0.393149,
+    "risk_signals": [
+      {
+        "feature": "state=Uttar Pradesh",
+        "log_odds_contribution": 0.469669
+      },
+      {
+        "feature": "utm_source=meta_ads",
+        "log_odds_contribution": 0.095476
+      },
+      {
+        "feature": "value_scaled",
+        "log_odds_contribution": 0.091312
+      }
+    ],
+    "scenario_assumptions": true,
+    "selected_expected_contribution_inr": "198.79"
+  },
+  {
+    "action": "nudge_to_prepaid",
+    "address_review": {
+      "address_quality": "complete",
+      "cached": false,
+      "language": "English",
+      "missing_details": [],
+      "model": null,
+      "name_quality": "unremarkable",
+      "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+      "source": "offline_heuristic"
+    },
+    "disposition": "recommendation",
+    "expected_contribution_inr": {
+      "hold_cancel": "0.00",
+      "nudge_to_prepaid": "146.32",
+      "ship_after_confirmation": "121.86",
+      "ship_as_is": "83.15"
+    },
+    "order_id": "DEMO-PRIOR-RTO",
+    "policy_schema_version": 1,
+    "prepaid_discount_inr": "24.95",
+    "reason": "Offer INR 24.95 off prepaid; this has the best estimated contribution under the configured uptake assumptions.",
+    "required_before_shipping": [
+      "verified payment success; otherwise use confirmation flow"
+    ],
+    "risk_probability": 0.472505,
+    "risk_signals": [
+      {
+        "feature": "state=Bihar",
+        "log_odds_contribution": 0.462987
+      },
+      {
+        "feature": "prior_rto_rate",
+        "log_odds_contribution": 0.145018
+      },
+      {
+        "feature": "utm_source=meta_ads",
+        "log_odds_contribution": 0.095476
+      }
+    ],
+    "scenario_assumptions": true,
+    "selected_expected_contribution_inr": "146.32"
+  },
+  {
+    "action": "hold_cancel",
+    "address_review": {
+      "source": "not_called"
+    },
+    "disposition": "hold_for_review",
+    "expected_contribution_inr": {},
+    "order_id": "DEMO-MISSING-PIN",
+    "policy_schema_version": 1,
+    "prepaid_discount_inr": "0.00",
+    "reason": "Hold for correction: missing pincode; pincode format needs correction. No cancellation has been executed.",
+    "required_before_shipping": [
+      "missing pincode",
+      "pincode format needs correction"
+    ],
+    "risk_probability": null,
+    "risk_signals": [],
+    "scenario_assumptions": true,
+    "selected_expected_contribution_inr": null
+  },
+  {
+    "action": "ship_after_confirmation",
+    "address_review": {
+      "address_quality": "complete",
+      "cached": false,
+      "language": "English",
+      "missing_details": [],
+      "model": null,
+      "name_quality": "placeholder",
+      "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+      "source": "offline_heuristic"
+    },
+    "disposition": "recommendation",
+    "expected_contribution_inr": {
+      "hold_cancel": "0.00",
+      "nudge_to_prepaid": "296.06",
+      "ship_after_confirmation": "287.55",
+      "ship_as_is": "300.48"
+    },
+    "order_id": "DEMO-PLACEHOLDER",
+    "policy_schema_version": 1,
+    "prepaid_discount_inr": "0.00",
+    "reason": "Ask the customer to confirm recipient name before shipping.",
+    "required_before_shipping": [
+      "customer confirms recipient name",
+      "explicit customer confirmation; no shipment before confirmation"
+    ],
+    "risk_probability": 0.178214,
+    "risk_signals": [
+      {
+        "feature": "value_scaled",
+        "log_odds_contribution": 0.091312
+      }
+    ],
+    "scenario_assumptions": true,
+    "selected_expected_contribution_inr": "287.55"
+  },
+  {
+    "action": "hold_cancel",
+    "address_review": {
+      "address_quality": "complete",
+      "cached": false,
+      "language": "English",
+      "missing_details": [],
+      "model": null,
+      "name_quality": "unremarkable",
+      "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+      "source": "offline_heuristic"
+    },
+    "disposition": "hold_for_review",
+    "expected_contribution_inr": {
+      "hold_cancel": "0.00",
+      "nudge_to_prepaid": "-18.68",
+      "ship_after_confirmation": "-21.10",
+      "ship_as_is": "-73.77"
+    },
+    "order_id": "DEMO-LOW-MARGIN",
+    "policy_schema_version": 1,
+    "prepaid_discount_inr": "0.00",
+    "reason": "Hold for operations review: available actions have insufficient estimated contribution under the configured assumptions.",
+    "required_before_shipping": [
+      "operations reviews the financial assumptions and order before release"
+    ],
+    "risk_probability": 0.455396,
+    "risk_signals": [
+      {
+        "feature": "state=Bihar",
+        "log_odds_contribution": 0.462987
+      },
+      {
+        "feature": "prior_rto_rate",
+        "log_odds_contribution": 0.145018
+      },
+      {
+        "feature": "utm_source=meta_ads",
+        "log_odds_contribution": 0.095476
+      }
+    ],
+    "scenario_assumptions": true,
+    "selected_expected_contribution_inr": "0.00"
+  }
+]

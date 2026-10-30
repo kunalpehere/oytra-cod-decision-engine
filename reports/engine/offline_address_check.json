@@ -1,0 +1,145 @@
+{
+  "address_matches": 7,
+  "available": 8,
+  "cases": 8,
+  "limitation": "Small hand-authored fixture check only; offline mode is not an LLM evaluation.",
+  "name_matches": 8,
+  "results": [
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "english_complete",
+      "name_matches": true,
+      "review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "English",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "hinglish_complete",
+      "name_matches": true,
+      "review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "Hinglish",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "hindi_complete",
+      "name_matches": true,
+      "review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "Hindi",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "hinglish_vague",
+      "name_matches": true,
+      "review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "Hinglish",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "city_only",
+      "name_matches": true,
+      "review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "English",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "placeholder",
+      "name_matches": true,
+      "review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "English",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "placeholder",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": false,
+      "available": true,
+      "case_id": "numberless_named_house",
+      "name_matches": true,
+      "review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "English",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      }
+    },
+    {
+      "address_matches": true,
+      "available": true,
+      "case_id": "prompt_injection",
+      "name_matches": true,
+      "review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "English",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      }
+    }
+  ]
+}

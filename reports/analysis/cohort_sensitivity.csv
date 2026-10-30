@@ -1,0 +1,9 @@
+scope,cohort,orders,delivered,rto,rto_rate,wilson_95_low,wilson_95_high,small_sample,valid_value_orders,average_order_value
+overall,all_eligible_resolved,1987,1422,565,0.284348,0.264944,0.304584,false,1984,921.35
+overall,no_quality_flags,1947,1398,549,0.281972,0.262430,0.302373,false,1947,923.32
+development,all_eligible_resolved,1297,919,378,0.291442,0.267356,0.316760,false,1294,939.02
+development,no_quality_flags,1269,903,366,0.288416,0.264159,0.313950,false,1269,943.48
+validation,all_eligible_resolved,361,260,101,0.279778,0.235978,0.328217,false,361,897.15
+validation,no_quality_flags,354,257,97,0.274011,0.230162,0.322713,false,354,892.31
+evaluation,all_eligible_resolved,329,243,86,0.261398,0.216867,0.311437,false,329,878.40
+evaluation,no_quality_flags,324,238,86,0.265432,0.220304,0.316057,false,324,878.25

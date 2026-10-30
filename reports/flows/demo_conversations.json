@@ -1,0 +1,1635 @@
+[
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "ship_after_confirmation",
+          "input_issues": [],
+          "language": "Hinglish",
+          "simulation_only": true,
+          "state": "awaiting_confirmation"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "yes",
+          "text": "YES"
+        },
+        "seq": 2,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "awaiting_details"
+        },
+        "seq": 3,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "unclear",
+          "text": "ADDRESS: House 21, Gali 4, Station Road"
+        },
+        "seq": 4,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_corrected_details",
+        "payload": {
+          "after": "House 21, Gali 4, Station Road",
+          "before": "mandir ke peeche, phone krke aana",
+          "delivery_details_complete": true,
+          "field": "address",
+          "verified_by": "customer_supplied_format_check_only"
+        },
+        "seq": 5,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_details",
+          "reason": "customer_reply",
+          "state": "awaiting_confirmation"
+        },
+        "seq": 6,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "yes",
+          "text": "haan"
+        },
+        "seq": 7,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "ready_to_ship_cod"
+        },
+        "seq": 8,
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "can_ship": true,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "3e18b56d3c36d7ca2b2c87684adf2dfe16f52a3916bd29282c800f488a5cc8d1",
+    "customer_confirmed": true,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "ship_after_confirmation",
+      "address_review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "Hinglish",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "225.13",
+        "ship_after_confirmation": "198.79",
+        "ship_as_is": "177.59"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-DETAILS",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "0.00",
+      "reason": "Ask the customer to confirm delivery details before shipping.",
+      "required_before_shipping": [
+        "customer confirms or corrects delivery-location details",
+        "explicit customer confirmation; no shipment before confirmation"
+      ],
+      "risk_probability": 0.393149,
+      "risk_signals": [
+        {
+          "feature": "state=Uttar Pradesh",
+          "log_odds_contribution": 0.469669
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        },
+        {
+          "feature": "value_scaled",
+          "log_odds_contribution": 0.091312
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "198.79"
+    },
+    "discount": "0.00",
+    "display_time": "2026-10-30 09:00:00 IST",
+    "id": "FLOW-DETAILS",
+    "language": "Hinglish",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "confirm",
+        "text": "Order FLOW-DETAILS: INR 649 ka COD order confirm karein. YES se confirm, NO se cancel. Details ke liye ADDRESS: poora pata ya NAME: recipient ka naam bhejein. Deadline: 2026-10-31 09:00:00 IST. Sentence mein correction bhejte waqt actual values double quotes mein likhein.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 2,
+        "template": "details",
+        "text": "Ship karne se pehle chahiye: poora delivery address. Actual address aur name double quotes mein likhein. Example: mera address ye hai \"House 12, Main Road, Nashik\" aur name \"Kunal\". ADDRESS: poora pata ya NAME: recipient ka naam bhi chalega. In details ko confirm karne ke liye YES bhejein. Original deadline wahi hai.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 3,
+        "template": "",
+        "text": "YES",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 4,
+        "template": "details",
+        "text": "Ship karne se pehle chahiye: poora delivery address. Actual address aur name double quotes mein likhein. Example: mera address ye hai \"House 12, Main Road, Nashik\" aur name \"Kunal\". ADDRESS: poora pata ya NAME: recipient ka naam bhi chalega. In details ko confirm karne ke liye YES bhejein. Original deadline wahi hai.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 5,
+        "template": "",
+        "text": "ADDRESS: House 21, Gali 4, Station Road",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 6,
+        "template": "details_saved",
+        "text": "Record hua: address \"House 21, Gali 4, Station Road\". In details ko confirm karne ke liye YES bhejein. Original deadline wahi hai.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 7,
+        "template": "",
+        "text": "haan",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 8,
+        "template": "ready_cod",
+        "text": "Confirmed: FLOW-DETAILS INR 649 par COD shipping ke liye ready hai. Yeh simulation hai; asli shipment nahi bana.",
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": false,
+    "needs_name": false,
+    "now": 1793331000,
+    "order": {
+      "address": "House 21, Gali 4, Station Road",
+      "city": "Lucknow",
+      "courier": "Delhivery",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "0",
+      "customer_prior_rto": "0",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 12:00",
+      "order_id": "FLOW-DETAILS",
+      "order_value": "649",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "226001",
+      "state": "Uttar Pradesh",
+      "utm_source": "meta_ads"
+    },
+    "payable": "649.00",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-1c1ff61253227161",
+    "payment_link": "mock://payment/MOCK-1c1ff61253227161",
+    "payment_review_required": false,
+    "payment_status": "not_offered",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": false,
+    "simulation_only": true,
+    "state": "ready_to_ship_cod",
+    "unclear_replies": 0
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "ship_after_confirmation",
+          "input_issues": [],
+          "language": "Hindi",
+          "simulation_only": true,
+          "state": "awaiting_confirmation"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "no",
+          "text": "नहीं"
+        },
+        "seq": 2,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "cancelled"
+        },
+        "seq": 3,
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "can_ship": false,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "c1bf8ff20e67f5cbd9ca15c567a04ed51efbffbe82a0341131f79d2afa9daa51",
+    "customer_confirmed": false,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "ship_after_confirmation",
+      "address_review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "Hinglish",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "225.13",
+        "ship_after_confirmation": "198.79",
+        "ship_as_is": "177.59"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-CANCEL",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "0.00",
+      "reason": "Ask the customer to confirm delivery details before shipping.",
+      "required_before_shipping": [
+        "customer confirms or corrects delivery-location details",
+        "explicit customer confirmation; no shipment before confirmation"
+      ],
+      "risk_probability": 0.393149,
+      "risk_signals": [
+        {
+          "feature": "state=Uttar Pradesh",
+          "log_odds_contribution": 0.469669
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        },
+        {
+          "feature": "value_scaled",
+          "log_odds_contribution": 0.091312
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "198.79"
+    },
+    "discount": "0.00",
+    "display_time": "2026-10-30 09:00:00 IST",
+    "id": "FLOW-CANCEL",
+    "language": "Hindi",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "confirm",
+        "text": "ऑर्डर FLOW-CANCEL: INR 649 के COD ऑर्डर की पुष्टि करें। पुष्टि के लिए YES, रद्द करने के लिए NO लिखें। सुधार के लिए ADDRESS: पूरा पता या NAME: प्राप्तकर्ता का नाम लिखें। समय सीमा: 2026-10-31 09:00:00 IST। वाक्य में सुधार भेजते समय असली जानकारी double quotes में लिखें।",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 2,
+        "template": "details",
+        "text": "भेजने से पहले ये जानकारी चाहिए: पूरा डिलीवरी पता। असली जानकारी double quotes में लिखें। उदाहरण: मेरा पता \"मकान 12, मेन रोड, नाशिक\" और नाम \"कुणाल\"। ADDRESS: पूरा पता या NAME: प्राप्तकर्ता का नाम भी लिख सकते हैं। इन जानकारियों की पुष्टि के लिए YES लिखें। मूल समय सीमा नहीं बदली है।",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 3,
+        "template": "",
+        "text": "नहीं",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 4,
+        "template": "cancelled",
+        "text": "आपके स्पष्ट अनुरोध पर ऑर्डर FLOW-CANCEL रद्द किया गया। सिमुलेटेड ऑर्डर नहीं भेजा जाएगा।",
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": true,
+    "needs_name": false,
+    "now": 1793331000,
+    "order": {
+      "address": "mandir ke peeche, phone krke aana",
+      "city": "Lucknow",
+      "courier": "Delhivery",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "0",
+      "customer_prior_rto": "0",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 12:00",
+      "order_id": "FLOW-CANCEL",
+      "order_value": "649",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "226001",
+      "state": "Uttar Pradesh",
+      "utm_source": "meta_ads"
+    },
+    "payable": "649.00",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-4dd98041fda5ae41",
+    "payment_link": "mock://payment/MOCK-4dd98041fda5ae41",
+    "payment_review_required": false,
+    "payment_status": "not_offered",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": false,
+    "simulation_only": true,
+    "state": "cancelled",
+    "unclear_replies": 0
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "ship_after_confirmation",
+          "input_issues": [],
+          "language": "English",
+          "simulation_only": true,
+          "state": "awaiting_confirmation"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "unclear",
+          "text": "what is this?"
+        },
+        "seq": 2,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "unclear",
+          "text": "some random text"
+        },
+        "seq": 3,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "held_for_review"
+        },
+        "seq": 4,
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "can_ship": false,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "2d447c79bd8f2d6c9ffcaebfb47f6660c2f6b01e261d235daec32d591d324dd9",
+    "customer_confirmed": false,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "ship_after_confirmation",
+      "address_review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "Hinglish",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "225.13",
+        "ship_after_confirmation": "198.79",
+        "ship_as_is": "177.59"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-UNCLEAR",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "0.00",
+      "reason": "Ask the customer to confirm delivery details before shipping.",
+      "required_before_shipping": [
+        "customer confirms or corrects delivery-location details",
+        "explicit customer confirmation; no shipment before confirmation"
+      ],
+      "risk_probability": 0.393149,
+      "risk_signals": [
+        {
+          "feature": "state=Uttar Pradesh",
+          "log_odds_contribution": 0.469669
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        },
+        {
+          "feature": "value_scaled",
+          "log_odds_contribution": 0.091312
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "198.79"
+    },
+    "discount": "0.00",
+    "display_time": "2026-10-30 09:00:00 IST",
+    "id": "FLOW-UNCLEAR",
+    "language": "English",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "confirm",
+        "text": "Order FLOW-UNCLEAR: please confirm your COD order of INR 649. Reply YES to confirm, NO to cancel. If details are incomplete, send ADDRESS: your full delivery address or NAME: recipient name. Deadline: 2026-10-31 09:00:00 IST. For corrections in a sentence, put each actual value in double quotes.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 2,
+        "template": "details",
+        "text": "Before shipping, please provide: full delivery address. Put the actual values in double quotes after their labels. Example: my address is \"House 12, Main Road, Nashik\" and name \"Kunal\". You can also use ADDRESS: full address or NAME: recipient name. Reply YES to confirm these details. Your original deadline is unchanged.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 3,
+        "template": "",
+        "text": "what is this?",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 4,
+        "template": "clarify",
+        "text": "Reply YES to confirm COD, NO to cancel, or COD to decline prepaid. Put the actual values in double quotes after their labels. Example: my address is \"House 12, Main Road, Nashik\" and name \"Kunal\". You can also use ADDRESS: full address or NAME: recipient name.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 5,
+        "template": "",
+        "text": "some random text",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 6,
+        "template": "unclear_hold",
+        "text": "We still cannot confirm your request clearly. The order is held for operations review and will not ship automatically.",
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": true,
+    "needs_name": false,
+    "now": 1793331000,
+    "order": {
+      "address": "mandir ke peeche, phone krke aana",
+      "city": "Lucknow",
+      "courier": "Delhivery",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "0",
+      "customer_prior_rto": "0",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 12:00",
+      "order_id": "FLOW-UNCLEAR",
+      "order_value": "649",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "226001",
+      "state": "Uttar Pradesh",
+      "utm_source": "meta_ads"
+    },
+    "payable": "649.00",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-78c4221c1e857ba3",
+    "payment_link": "mock://payment/MOCK-78c4221c1e857ba3",
+    "payment_review_required": false,
+    "payment_status": "not_offered",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": false,
+    "simulation_only": true,
+    "state": "held_for_review",
+    "unclear_replies": 2
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "ship_after_confirmation",
+          "input_issues": [],
+          "language": "English",
+          "simulation_only": true,
+          "state": "awaiting_confirmation"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793374200,
+        "kind": "reminder",
+        "payload": {
+          "deadline_unchanged": true
+        },
+        "seq": 2,
+        "time": "2026-10-30 21:00:00 IST"
+      },
+      {
+        "at": 1793417400,
+        "kind": "timeout",
+        "payload": {
+          "deadline_unchanged": true
+        },
+        "seq": 3,
+        "time": "2026-10-31 09:00:00 IST"
+      },
+      {
+        "at": 1793417400,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "timeout",
+          "state": "held_for_review"
+        },
+        "seq": 4,
+        "time": "2026-10-31 09:00:00 IST"
+      }
+    ],
+    "can_ship": false,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "4eca2b486effe7434c0a2c4fd6ac47fe147c20cefa28a99268d7edc7f5418fa2",
+    "customer_confirmed": false,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "ship_after_confirmation",
+      "address_review": {
+        "address_quality": "needs_clarification",
+        "cached": false,
+        "language": "Hinglish",
+        "missing_details": [
+          "house/building and street/locality details"
+        ],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: ask for specific delivery-location details.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "225.13",
+        "ship_after_confirmation": "198.79",
+        "ship_as_is": "177.59"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-TIMEOUT",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "0.00",
+      "reason": "Ask the customer to confirm delivery details before shipping.",
+      "required_before_shipping": [
+        "customer confirms or corrects delivery-location details",
+        "explicit customer confirmation; no shipment before confirmation"
+      ],
+      "risk_probability": 0.393149,
+      "risk_signals": [
+        {
+          "feature": "state=Uttar Pradesh",
+          "log_odds_contribution": 0.469669
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        },
+        {
+          "feature": "value_scaled",
+          "log_odds_contribution": 0.091312
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "198.79"
+    },
+    "discount": "0.00",
+    "display_time": "2026-10-31 09:00:00 IST",
+    "id": "FLOW-TIMEOUT",
+    "language": "English",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "confirm",
+        "text": "Order FLOW-TIMEOUT: please confirm your COD order of INR 649. Reply YES to confirm, NO to cancel. If details are incomplete, send ADDRESS: your full delivery address or NAME: recipient name. Deadline: 2026-10-31 09:00:00 IST. For corrections in a sentence, put each actual value in double quotes.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 2,
+        "template": "details",
+        "text": "Before shipping, please provide: full delivery address. Put the actual values in double quotes after their labels. Example: my address is \"House 12, Main Road, Nashik\" and name \"Kunal\". You can also use ADDRESS: full address or NAME: recipient name. Reply YES to confirm these details. Your original deadline is unchanged.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793374200,
+        "direction": "outgoing_mock",
+        "seq": 3,
+        "template": "reminder",
+        "text": "Reminder for FLOW-TIMEOUT: your order is still pending. Please reply or complete the mock payment before 2026-10-31 09:00:00 IST.",
+        "time": "2026-10-30 21:00:00 IST"
+      },
+      {
+        "at": 1793417400,
+        "direction": "outgoing_mock",
+        "seq": 4,
+        "template": "timeout",
+        "text": "The 24-hour response window for FLOW-TIMEOUT ended. The order is held for operations review, not automatically cancelled.",
+        "time": "2026-10-31 09:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": true,
+    "needs_name": false,
+    "now": 1793417400,
+    "order": {
+      "address": "mandir ke peeche, phone krke aana",
+      "city": "Lucknow",
+      "courier": "Delhivery",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "0",
+      "customer_prior_rto": "0",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 12:00",
+      "order_id": "FLOW-TIMEOUT",
+      "order_value": "649",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "226001",
+      "state": "Uttar Pradesh",
+      "utm_source": "meta_ads"
+    },
+    "payable": "649.00",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-2b1e906871a4f0df",
+    "payment_link": "mock://payment/MOCK-2b1e906871a4f0df",
+    "payment_review_required": false,
+    "payment_status": "not_offered",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": true,
+    "simulation_only": true,
+    "state": "held_for_review",
+    "unclear_replies": 0
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "nudge_to_prepaid",
+          "input_issues": [],
+          "language": "English",
+          "simulation_only": true,
+          "state": "awaiting_payment"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "paid_claim",
+          "text": "paid"
+        },
+        "seq": 2,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "mock_payment_event",
+        "payload": {
+          "amount": "474.05",
+          "payment_id": "MOCK-b5487422bda67a94",
+          "simulation_only": true,
+          "status": "success"
+        },
+        "seq": 3,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_payment",
+          "reason": "mock_payment",
+          "state": "ready_to_ship_prepaid"
+        },
+        "seq": 4,
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "can_ship": true,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "3f1b7526dea945cdc7389cd9f02784b75b377237b5f910de3b4b2d1eb56d0307",
+    "customer_confirmed": true,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "nudge_to_prepaid",
+      "address_review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "English",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "146.32",
+        "ship_after_confirmation": "121.86",
+        "ship_as_is": "83.15"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-PAID",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "24.95",
+      "reason": "Offer INR 24.95 off prepaid; this has the best estimated contribution under the configured uptake assumptions.",
+      "required_before_shipping": [
+        "verified payment success; otherwise use confirmation flow"
+      ],
+      "risk_probability": 0.472505,
+      "risk_signals": [
+        {
+          "feature": "state=Bihar",
+          "log_odds_contribution": 0.462987
+        },
+        {
+          "feature": "prior_rto_rate",
+          "log_odds_contribution": 0.145018
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "146.32"
+    },
+    "discount": "24.95",
+    "display_time": "2026-10-30 09:00:00 IST",
+    "id": "FLOW-PAID",
+    "language": "English",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "prepaid",
+        "text": "Order FLOW-PAID: pay INR 474.05 online and save INR 24.95 (regular COD INR 499). MOCK payment: mock://payment/MOCK-b5487422bda67a94. Reply COD to keep cash on delivery, or NO to cancel. No real money is collected. Deadline: 2026-10-31 09:00:00 IST.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 2,
+        "template": "",
+        "text": "paid",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 3,
+        "template": "paid_claim",
+        "text": "Payment cannot be verified from a chat message. Only the mock payment service can mark this order paid. No shipment is released from this message.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 4,
+        "template": "ready_prepaid",
+        "text": "Mock payment verified: FLOW-PAID is ready to ship prepaid. Do not collect COD. No real payment or shipment occurred.",
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "mode": "prepaid",
+    "needs_address": false,
+    "needs_name": false,
+    "now": 1793331000,
+    "order": {
+      "address": "House 14, Station Road, Sector 4",
+      "city": "Patna",
+      "courier": "Xpressbees",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "3",
+      "customer_prior_rto": "3",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 02:00",
+      "order_id": "FLOW-PAID",
+      "order_value": "499",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "800001",
+      "state": "Bihar",
+      "utm_source": "meta_ads"
+    },
+    "payable": "474.05",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-b5487422bda67a94",
+    "payment_link": "mock://payment/MOCK-b5487422bda67a94",
+    "payment_review_required": false,
+    "payment_status": "verified",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": false,
+    "simulation_only": true,
+    "state": "ready_to_ship_prepaid",
+    "unclear_replies": 0
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "nudge_to_prepaid",
+          "input_issues": [],
+          "language": "Hindi",
+          "simulation_only": true,
+          "state": "awaiting_payment"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "mock_payment_event",
+        "payload": {
+          "amount": "474.05",
+          "payment_id": "MOCK-514e904a9be6027e",
+          "simulation_only": true,
+          "status": "failed"
+        },
+        "seq": 2,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_payment",
+          "reason": "mock_payment",
+          "state": "awaiting_confirmation"
+        },
+        "seq": 3,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "yes",
+          "text": "हाँ"
+        },
+        "seq": 4,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "ready_to_ship_cod"
+        },
+        "seq": 5,
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "can_ship": true,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "15c4be6d418ead03f2c9548709335c1df4176e8b6409a9e713bada387d8a7bf1",
+    "customer_confirmed": true,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "nudge_to_prepaid",
+      "address_review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "English",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "146.32",
+        "ship_after_confirmation": "121.86",
+        "ship_as_is": "83.15"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-PAYMENT-FAILED",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "24.95",
+      "reason": "Offer INR 24.95 off prepaid; this has the best estimated contribution under the configured uptake assumptions.",
+      "required_before_shipping": [
+        "verified payment success; otherwise use confirmation flow"
+      ],
+      "risk_probability": 0.472505,
+      "risk_signals": [
+        {
+          "feature": "state=Bihar",
+          "log_odds_contribution": 0.462987
+        },
+        {
+          "feature": "prior_rto_rate",
+          "log_odds_contribution": 0.145018
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "146.32"
+    },
+    "discount": "24.95",
+    "display_time": "2026-10-30 09:00:00 IST",
+    "id": "FLOW-PAYMENT-FAILED",
+    "language": "Hindi",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "prepaid",
+        "text": "ऑर्डर FLOW-PAYMENT-FAILED: INR 474.05 का ऑनलाइन भुगतान करें और INR 24.95 बचाएँ (COD INR 499)। नकली भुगतान लिंक: mock://payment/MOCK-514e904a9be6027e। COD रखने के लिए COD, रद्द करने के लिए NO लिखें। असली पैसे नहीं लिए जाएँगे। समय सीमा: 2026-10-31 09:00:00 IST।",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 2,
+        "template": "cod_fallback",
+        "text": "प्रीपेड ऑफर बंद है (failed)। INR 499 पर COD रख सकते हैं। 2026-10-31 09:00:00 IST से पहले YES या NO लिखें।",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 3,
+        "template": "",
+        "text": "हाँ",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 4,
+        "template": "ready_cod",
+        "text": "पुष्टि हुई: ऑर्डर FLOW-PAYMENT-FAILED, INR 499 पर COD से भेजने के लिए तैयार है। यह केवल सिमुलेशन है।",
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": false,
+    "needs_name": false,
+    "now": 1793331000,
+    "order": {
+      "address": "House 14, Station Road, Sector 4",
+      "city": "Patna",
+      "courier": "Xpressbees",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "3",
+      "customer_prior_rto": "3",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 02:00",
+      "order_id": "FLOW-PAYMENT-FAILED",
+      "order_value": "499",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "800001",
+      "state": "Bihar",
+      "utm_source": "meta_ads"
+    },
+    "payable": "474.05",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-514e904a9be6027e",
+    "payment_link": "mock://payment/MOCK-514e904a9be6027e",
+    "payment_review_required": false,
+    "payment_status": "failed",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": false,
+    "simulation_only": true,
+    "state": "ready_to_ship_cod",
+    "unclear_replies": 0
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "nudge_to_prepaid",
+          "input_issues": [],
+          "language": "Hinglish",
+          "simulation_only": true,
+          "state": "awaiting_payment"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793374200,
+        "kind": "reminder",
+        "payload": {
+          "deadline_unchanged": true
+        },
+        "seq": 2,
+        "time": "2026-10-30 21:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "kind": "payment_expired",
+        "payload": {
+          "deadline_unchanged": true
+        },
+        "seq": 3,
+        "time": "2026-10-31 03:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_payment",
+          "reason": "payment_expired",
+          "state": "awaiting_confirmation"
+        },
+        "seq": 4,
+        "time": "2026-10-31 03:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "yes",
+          "text": "YES"
+        },
+        "seq": 5,
+        "time": "2026-10-31 03:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "ready_to_ship_cod"
+        },
+        "seq": 6,
+        "time": "2026-10-31 03:00:00 IST"
+      }
+    ],
+    "can_ship": true,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "7d38097dbd4e628f3eb16126f9fd8631752774af53e3ae9c0e0f41c186314e28",
+    "customer_confirmed": true,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "nudge_to_prepaid",
+      "address_review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "English",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "146.32",
+        "ship_after_confirmation": "121.86",
+        "ship_as_is": "83.15"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-PAYMENT-EXPIRED",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "24.95",
+      "reason": "Offer INR 24.95 off prepaid; this has the best estimated contribution under the configured uptake assumptions.",
+      "required_before_shipping": [
+        "verified payment success; otherwise use confirmation flow"
+      ],
+      "risk_probability": 0.472505,
+      "risk_signals": [
+        {
+          "feature": "state=Bihar",
+          "log_odds_contribution": 0.462987
+        },
+        {
+          "feature": "prior_rto_rate",
+          "log_odds_contribution": 0.145018
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "146.32"
+    },
+    "discount": "24.95",
+    "display_time": "2026-10-31 03:00:00 IST",
+    "id": "FLOW-PAYMENT-EXPIRED",
+    "language": "Hinglish",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "prepaid",
+        "text": "Order FLOW-PAYMENT-EXPIRED: online INR 474.05 pay karke INR 24.95 bachayein (COD INR 499). MOCK link: mock://payment/MOCK-caa58996e06772f3. COD rakhne ke liye COD, cancel ke liye NO bhejein. Asli paise nahi lagenge. Deadline: 2026-10-31 09:00:00 IST.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793374200,
+        "direction": "outgoing_mock",
+        "seq": 2,
+        "template": "reminder",
+        "text": "Reminder: order FLOW-PAYMENT-EXPIRED abhi pending hai. 2026-10-31 09:00:00 IST se pehle reply ya mock payment karein.",
+        "time": "2026-10-30 21:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "direction": "outgoing_mock",
+        "seq": 3,
+        "template": "cod_fallback",
+        "text": "Prepaid offer band hai (expired). INR 499 par COD rakh sakte hain. 2026-10-31 09:00:00 IST se pehle YES ya NO bhejein.",
+        "time": "2026-10-31 03:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "direction": "customer_mock",
+        "seq": 4,
+        "template": "",
+        "text": "YES",
+        "time": "2026-10-31 03:00:00 IST"
+      },
+      {
+        "at": 1793395800,
+        "direction": "outgoing_mock",
+        "seq": 5,
+        "template": "ready_cod",
+        "text": "Confirmed: FLOW-PAYMENT-EXPIRED INR 499 par COD shipping ke liye ready hai. Yeh simulation hai; asli shipment nahi bana.",
+        "time": "2026-10-31 03:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": false,
+    "needs_name": false,
+    "now": 1793395800,
+    "order": {
+      "address": "House 14, Station Road, Sector 4",
+      "city": "Patna",
+      "courier": "Xpressbees",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "3",
+      "customer_prior_rto": "3",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 02:00",
+      "order_id": "FLOW-PAYMENT-EXPIRED",
+      "order_value": "499",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "800001",
+      "state": "Bihar",
+      "utm_source": "meta_ads"
+    },
+    "payable": "474.05",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-caa58996e06772f3",
+    "payment_link": "mock://payment/MOCK-caa58996e06772f3",
+    "payment_review_required": false,
+    "payment_status": "expired",
+    "refund_review_required": false,
+    "reminder_at": 1793374200,
+    "reminder_sent": true,
+    "simulation_only": true,
+    "state": "ready_to_ship_cod",
+    "unclear_replies": 0
+  },
+  {
+    "audit": [
+      {
+        "at": 1793331000,
+        "kind": "conversation_started",
+        "payload": {
+          "action": "nudge_to_prepaid",
+          "input_issues": [],
+          "language": "English",
+          "simulation_only": true,
+          "state": "awaiting_payment"
+        },
+        "seq": 1,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "cod",
+          "text": "COD"
+        },
+        "seq": 2,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_payment",
+          "reason": "customer_reply",
+          "state": "awaiting_confirmation"
+        },
+        "seq": 3,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "customer_reply",
+        "payload": {
+          "intent": "yes",
+          "text": "YES"
+        },
+        "seq": 4,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "awaiting_confirmation",
+          "reason": "customer_reply",
+          "state": "ready_to_ship_cod"
+        },
+        "seq": 5,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "mock_payment_event",
+        "payload": {
+          "amount": "474.05",
+          "payment_id": "MOCK-ab89909c7b9ab938",
+          "simulation_only": true,
+          "status": "success"
+        },
+        "seq": 6,
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "kind": "state_changed",
+        "payload": {
+          "previous": "ready_to_ship_cod",
+          "reason": "mock_payment",
+          "state": "held_for_review"
+        },
+        "seq": 7,
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "can_ship": false,
+    "config": {
+      "default_language": "English",
+      "max_unclear_replies": 2,
+      "notes": "All times are relative to the first message. No reply resets the 24-hour deadline. All messages and payments are local simulations.",
+      "payment_expiry_hours": 18,
+      "reminder_hours": 12,
+      "schema_version": 1,
+      "timeout_hours": 24
+    },
+    "created_at": 1793331000,
+    "creation_fingerprint": "96c1e84d11ed32af3e37db6b05e96a4e7979f789e10ce3493b500fb0668096e0",
+    "customer_confirmed": true,
+    "deadline": 1793417400,
+    "deadline_display": "2026-10-31 09:00:00 IST",
+    "decision": {
+      "action": "nudge_to_prepaid",
+      "address_review": {
+        "address_quality": "complete",
+        "cached": false,
+        "language": "English",
+        "missing_details": [],
+        "model": null,
+        "name_quality": "unremarkable",
+        "reason": "Offline heuristic: concrete location text found; physical address not verified.",
+        "source": "offline_heuristic"
+      },
+      "disposition": "recommendation",
+      "expected_contribution_inr": {
+        "hold_cancel": "0.00",
+        "nudge_to_prepaid": "146.32",
+        "ship_after_confirmation": "121.86",
+        "ship_as_is": "83.15"
+      },
+      "frozen_artifact_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+      "order_id": "FLOW-COD-CHOICE",
+      "policy_schema_version": 1,
+      "prepaid_discount_inr": "24.95",
+      "reason": "Offer INR 24.95 off prepaid; this has the best estimated contribution under the configured uptake assumptions.",
+      "required_before_shipping": [
+        "verified payment success; otherwise use confirmation flow"
+      ],
+      "risk_probability": 0.472505,
+      "risk_signals": [
+        {
+          "feature": "state=Bihar",
+          "log_odds_contribution": 0.462987
+        },
+        {
+          "feature": "prior_rto_rate",
+          "log_odds_contribution": 0.145018
+        },
+        {
+          "feature": "utm_source=meta_ads",
+          "log_odds_contribution": 0.095476
+        }
+      ],
+      "scenario_assumptions": true,
+      "selected_expected_contribution_inr": "146.32"
+    },
+    "discount": "24.95",
+    "display_time": "2026-10-30 09:00:00 IST",
+    "id": "FLOW-COD-CHOICE",
+    "language": "English",
+    "messages": [
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 1,
+        "template": "prepaid",
+        "text": "Order FLOW-COD-CHOICE: pay INR 474.05 online and save INR 24.95 (regular COD INR 499). MOCK payment: mock://payment/MOCK-ab89909c7b9ab938. Reply COD to keep cash on delivery, or NO to cancel. No real money is collected. Deadline: 2026-10-31 09:00:00 IST.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 2,
+        "template": "",
+        "text": "COD",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 3,
+        "template": "cod_fallback",
+        "text": "The prepaid offer is closed (customer chose COD). You may keep COD at INR 499. Reply YES to confirm or NO to cancel before 2026-10-31 09:00:00 IST.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "customer_mock",
+        "seq": 4,
+        "template": "",
+        "text": "YES",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 5,
+        "template": "ready_cod",
+        "text": "Confirmed: FLOW-COD-CHOICE is ready to ship by COD for INR 499. This is a simulation; no real shipment is created.",
+        "time": "2026-10-30 09:00:00 IST"
+      },
+      {
+        "at": 1793331000,
+        "direction": "outgoing_mock",
+        "seq": 6,
+        "template": "payment_review",
+        "text": "A mock payment arrived after the offer/order closed, or its amount did not match. Operations must review it; do not collect or ship automatically.",
+        "time": "2026-10-30 09:00:00 IST"
+      }
+    ],
+    "mode": "COD",
+    "needs_address": false,
+    "needs_name": false,
+    "now": 1793331000,
+    "order": {
+      "address": "House 14, Station Road, Sector 4",
+      "city": "Patna",
+      "courier": "Xpressbees",
+      "customer_name": "Demo Customer",
+      "customer_prior_orders": "3",
+      "customer_prior_rto": "3",
+      "final_status": "",
+      "items": "Shampoo",
+      "num_items": "1",
+      "order_datetime": "2026-10-30 02:00",
+      "order_id": "FLOW-COD-CHOICE",
+      "order_value": "499",
+      "payment_method": "COD",
+      "phone": "9876543210",
+      "pincode": "800001",
+      "state": "Bihar",
+      "utm_source": "meta_ads"
+    },
+    "payable": "474.05",
+    "payment_expires_at": 1793395800,
+    "payment_id": "MOCK-ab89909c7b9ab938",
+    "payment_link": "mock://payment/MOCK-ab89909c7b9ab938",
+    "payment_review_required": true,
+    "payment_status": "late_or_mismatched_success",
+    "refund_review_required": true,
+    "reminder_at": 1793374200,
+    "reminder_sent": false,
+    "simulation_only": true,
+    "state": "held_for_review",
+    "unclear_replies": 0
+  }
+]

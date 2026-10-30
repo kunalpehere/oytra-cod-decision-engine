@@ -1,0 +1,56 @@
+[
+  {
+    "confirm_risk_threshold": 0.2,
+    "prepaid_risk_threshold": 0.4,
+    "scenario_contribution_inr": "127217.80",
+    "scenario_net_impact_inr": "1388.68"
+  },
+  {
+    "confirm_risk_threshold": 0.2,
+    "prepaid_risk_threshold": 0.5,
+    "scenario_contribution_inr": "126553.40",
+    "scenario_net_impact_inr": "724.28"
+  },
+  {
+    "confirm_risk_threshold": 0.2,
+    "prepaid_risk_threshold": 0.6,
+    "scenario_contribution_inr": "125736.21",
+    "scenario_net_impact_inr": "-92.91"
+  },
+  {
+    "confirm_risk_threshold": 0.3,
+    "prepaid_risk_threshold": 0.4,
+    "scenario_contribution_inr": "128061.70",
+    "scenario_net_impact_inr": "2232.58"
+  },
+  {
+    "confirm_risk_threshold": 0.3,
+    "prepaid_risk_threshold": 0.5,
+    "scenario_contribution_inr": "127397.30",
+    "scenario_net_impact_inr": "1568.18"
+  },
+  {
+    "confirm_risk_threshold": 0.3,
+    "prepaid_risk_threshold": 0.6,
+    "scenario_contribution_inr": "126580.11",
+    "scenario_net_impact_inr": "750.99"
+  },
+  {
+    "confirm_risk_threshold": 0.4,
+    "prepaid_risk_threshold": 0.4,
+    "scenario_contribution_inr": "128324.49",
+    "scenario_net_impact_inr": "2495.37"
+  },
+  {
+    "confirm_risk_threshold": 0.4,
+    "prepaid_risk_threshold": 0.5,
+    "scenario_contribution_inr": "127660.09",
+    "scenario_net_impact_inr": "1830.97"
+  },
+  {
+    "confirm_risk_threshold": 0.4,
+    "prepaid_risk_threshold": 0.6,
+    "scenario_contribution_inr": "126842.89",
+    "scenario_net_impact_inr": "1013.77"
+  }
+]

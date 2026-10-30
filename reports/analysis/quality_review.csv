@@ -1,0 +1,7 @@
+flag,retained_records,treatment
+inconsistent_customer_history,4,Retain outcome; history grouped as unknown and history features unusable.
+invalid_order_value,3,Retain outcome; exclude from amount averages and matched financial cohort.
+invalid_phone,17,Retain outcome and economics; do not treat phone as a verified customer identity.
+missing_city,4,Retain; city grouped as (missing).
+missing_pincode,12,Retain; pincode grouped as (missing).
+unresolved_outcome,1,Exclude from outcome analysis and financial baseline; retain date membership.

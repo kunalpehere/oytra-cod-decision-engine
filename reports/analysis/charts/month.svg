@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" role="img">
+<title>Monthly RTO rate - all eligible resolved orders</title>
+<rect width="100%" height="100%" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172b4d">
+<text x="24" y="35" font-size="22">Monthly RTO rate - all eligible resolved orders</text>
+<text x="24" y="61" font-size="13">Observed RTO rates; whiskers: approximate 95% Wilson intervals. Descriptive, not causal.</text>
+<text x="24" y="112" font-size="14">2026-04</text>
+<rect x="245" y="95" width="139.97" height="25" fill="#137c8b"/>
+<path d="M 362.56 107 H 409.53" stroke="#172b4d" stroke-width="2"/>
+<text x="725" y="112" font-size="14">31.1% (93/299)</text>
+<text x="24" y="167" font-size="14">2026-05</text>
+<rect x="245" y="150" width="131.80" height="25" fill="#137c8b"/>
+<path d="M 356.12 162 H 399.59" stroke="#172b4d" stroke-width="2"/>
+<text x="725" y="167" font-size="14">29.3% (99/338)</text>
+<text x="24" y="222" font-size="14">2026-06</text>
+<rect x="245" y="205" width="118.06" height="25" fill="#137c8b"/>
+<path d="M 342.84 217 H 385.77" stroke="#172b4d" stroke-width="2"/>
+<text x="725" y="222" font-size="14">26.2% (85/324)</text>
+<text x="24" y="277" font-size="14">2026-07</text>
+<rect x="245" y="260" width="135.27" height="25" fill="#137c8b"/>
+<path d="M 359.32 272 H 403.24" stroke="#172b4d" stroke-width="2"/>
+<text x="725" y="277" font-size="14">30.1% (101/336)</text>
+<text x="24" y="332" font-size="14">2026-08</text>
+<rect x="245" y="315" width="125.90" height="25" fill="#137c8b"/>
+<path d="M 351.19 327 H 392.70" stroke="#172b4d" stroke-width="2"/>
+<text x="725" y="332" font-size="14">28.0% (101/361)</text>
+<text x="24" y="387" font-size="14">2026-09</text>
+<rect x="245" y="370" width="117.63" height="25" fill="#137c8b"/>
+<path d="M 342.59 382 H 385.15" stroke="#172b4d" stroke-width="2"/>
+<text x="725" y="387" font-size="14">26.1% (86/329)</text>
+<text x="245" y="448" font-size="12">Scale: 0% to 100%; denominator shown for each group.</text>
+</g></svg>

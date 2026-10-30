@@ -1,0 +1,11 @@
+scenario,scope,policy_contribution_inr,baseline_contribution_inr,net_impact_inr
+base,validation,128324.49,125829.12,2495.37
+base,evaluation,114639.38,115528.68,-889.30
+weaker_responses,validation,118446.89,125829.12,-7382.23
+weaker_responses,evaluation,106205.62,115528.68,-9323.06
+no_prepaid_uptake,validation,126772.01,125829.12,942.89
+no_prepaid_uptake,evaluation,113601.91,115528.68,-1926.77
+delivery_cost_excluded_from_margin,validation,105630.18,102429.12,3201.06
+delivery_cost_excluded_from_margin,evaluation,93639.95,93658.68,-18.73
+no_response_discrimination,validation,120876.89,125829.12,-4952.23
+no_response_discrimination,evaluation,109434.67,115528.68,-6094.01

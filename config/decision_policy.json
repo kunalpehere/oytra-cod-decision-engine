@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "confirm_risk_threshold": 0.30,
+  "prepaid_risk_threshold": 0.45,
+  "hold_risk_threshold": 0.90,
+  "minimum_expected_contribution": 0,
+  "allow_auto_cancel": false,
+  "prepaid_discount_inr": 25,
+  "maximum_discount_fraction": 0.05,
+  "confirmation_message_cost_inr": 1,
+  "prepaid_message_cost_inr": 1,
+  "genuine_confirmation_rate": 0.90,
+  "rto_confirmation_rate": 0.30,
+  "genuine_prepaid_uptake": 0.35,
+  "rto_prepaid_uptake": 0.20,
+  "prepaid_payment_fee_fraction": 0.02,
+  "delivered_margin_includes_fulfilment": true,
+  "notes": "Intervention responses, message costs and payment fees are hypothetical, not measured in the COD dataset. INR 25 discount capped at 5% of value and expected reduction in RTO logistics loss. No automatic cancellation."
+}

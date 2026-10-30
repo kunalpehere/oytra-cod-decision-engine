@@ -1,0 +1,72 @@
+{
+  "excluded_unresolved_or_ambiguous_or_outside_dates": 1,
+  "freeze_sha256": "9be69e4c4aa340604eddf5bf9cf5e951514992aaf98ac9cdb8b7f504e15c120a",
+  "input_sha256": "71e73f9ddd71ad077b7e93a41a45c16a18e783638370de9458c603b61f6e0b7f",
+  "live_llm_verified": false,
+  "performance": {
+    "evaluation": {
+      "baseline_contribution_inr": "115528.68",
+      "buckets": {
+        "hold_cancel": 5,
+        "nudge_to_prepaid": 28,
+        "ship_after_confirmation": 81,
+        "ship_as_is": 215
+      },
+      "excluded_invalid_values": 0,
+      "expected_discount_cost_inr": "192.26",
+      "expected_message_cost_inr": "128.55",
+      "expected_payment_fee_inr": "159.39",
+      "financial_orders": 329,
+      "genuine_held_order_margin_at_risk_inr": "2752.80",
+      "gross_avoided_rto_loss_inr": "4941.06",
+      "net_impact_inr": "-889.30",
+      "orders": 329,
+      "policy_contribution_inr": "114639.38"
+    },
+    "validation": {
+      "baseline_contribution_inr": "125829.12",
+      "buckets": {
+        "hold_cancel": 7,
+        "nudge_to_prepaid": 20,
+        "ship_after_confirmation": 106,
+        "ship_as_is": 228
+      },
+      "excluded_invalid_values": 0,
+      "expected_discount_cost_inr": "133.76",
+      "expected_message_cost_inr": "140.35",
+      "expected_payment_fee_inr": "143.79",
+      "financial_orders": 361,
+      "genuine_held_order_margin_at_risk_inr": "2478.14",
+      "gross_avoided_rto_loss_inr": "7634.52",
+      "net_impact_inr": "2495.37",
+      "orders": 361,
+      "policy_contribution_inr": "128324.49"
+    }
+  },
+  "policy": {
+    "allow_auto_cancel": false,
+    "confirm_risk_threshold": 0.4,
+    "confirmation_message_cost_inr": 1,
+    "delivered_margin_includes_fulfilment": true,
+    "genuine_confirmation_rate": 0.9,
+    "genuine_prepaid_uptake": 0.35,
+    "hold_risk_threshold": 0.9,
+    "maximum_discount_fraction": 0.05,
+    "minimum_expected_contribution": 0,
+    "notes": "Intervention responses, message costs and payment fees are hypothetical, not measured in the COD dataset. INR 25 discount capped at 5% of value and expected reduction in RTO logistics loss. No automatic cancellation.",
+    "prepaid_discount_inr": 25,
+    "prepaid_message_cost_inr": 1,
+    "prepaid_payment_fee_fraction": 0.02,
+    "prepaid_risk_threshold": 0.4,
+    "rto_confirmation_rate": 0.3,
+    "rto_prepaid_uptake": 0.2,
+    "schema_version": 1
+  },
+  "retained_input_orders": 1988,
+  "selected_model": "logistic",
+  "split_orders": {
+    "development": 1297,
+    "evaluation": 329,
+    "validation": 361
+  }
+}

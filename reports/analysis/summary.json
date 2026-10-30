@@ -1,0 +1,59 @@
+{
+  "assumptions_sha256": "e8a56b97498679b4dfea3c8d380d558ae216b833fc7e690325ac8c0ef0883eb5",
+  "excluded_outcome_analysis_orders": 1,
+  "input_sha256": "71e73f9ddd71ad077b7e93a41a45c16a18e783638370de9458c603b61f6e0b7f",
+  "outcome_analysis_orders": 1987,
+  "retained_input_orders": 1988,
+  "rto_loss_per_order": "169.40",
+  "scopes": {
+    "development": {
+      "average_order_value": "939.02",
+      "delivered": 919,
+      "orders": 1297,
+      "rto": 378,
+      "rto_rate": "0.291442",
+      "small_sample": "false",
+      "valid_value_orders": 1294,
+      "wilson_95_high": "0.316760",
+      "wilson_95_low": "0.267356"
+    },
+    "evaluation": {
+      "average_order_value": "878.40",
+      "delivered": 243,
+      "orders": 329,
+      "rto": 86,
+      "rto_rate": "0.261398",
+      "small_sample": "false",
+      "valid_value_orders": 329,
+      "wilson_95_high": "0.311437",
+      "wilson_95_low": "0.216867"
+    },
+    "overall": {
+      "average_order_value": "921.35",
+      "delivered": 1422,
+      "orders": 1987,
+      "rto": 565,
+      "rto_rate": "0.284348",
+      "small_sample": "false",
+      "valid_value_orders": 1984,
+      "wilson_95_high": "0.304584",
+      "wilson_95_low": "0.264944"
+    },
+    "validation": {
+      "average_order_value": "897.15",
+      "delivered": 260,
+      "orders": 361,
+      "rto": 101,
+      "rto_rate": "0.279778",
+      "small_sample": "false",
+      "valid_value_orders": 361,
+      "wilson_95_high": "0.328217",
+      "wilson_95_low": "0.235978"
+    }
+  },
+  "split_counts": {
+    "development": 1298,
+    "evaluation": 329,
+    "validation": 361
+  }
+}

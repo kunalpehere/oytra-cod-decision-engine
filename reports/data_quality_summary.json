@@ -1,0 +1,22 @@
+{
+  "exact_duplicates_removed": 30,
+  "flagged_retained_orders": 41,
+  "input_rows": 2018,
+  "issue_counts": {
+    "inconsistent_customer_history": 4,
+    "invalid_order_value": 3,
+    "invalid_phone": 17,
+    "missing_city": 4,
+    "missing_pincode": 12,
+    "unresolved_outcome": 1
+  },
+  "normalization_events": 19,
+  "resolved_orders": 1987,
+  "resolved_outcomes": {
+    "DELIVERED": 1422,
+    "RTO": 565
+  },
+  "source_sha256": "268c343390168a97fdf742cb6bd223122cec022cc1f7aa75c8694a45122e1107",
+  "unique_orders_retained": 1988,
+  "unresolved_orders": 1
+}

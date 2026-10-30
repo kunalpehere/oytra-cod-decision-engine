@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+tmp/
+.pytest_cache/
+.env.*
+.env*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials*.json
+*credentials*.json
+secrets*.json
+*secrets*.json
+.aws/
+.ssh/
+.codex/
+.agents/
+data/cache/
+data/simulator/
+
+# Company-supplied customer data and local state stay off the public repository.
+/data/
+/reports/data_quality_issues.csv
+/reports/data_transformation_log.csv
+/reports/dashboard/exports/
+/reports/engine/validation_decisions.csv
+/reports/engine/evaluation_decisions.csv
+
+# Local packaging and verification workspaces.
+/tmp/
+/submission-staging/
+/output/submission/
